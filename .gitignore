@@ -1,0 +1,100 @@
+﻿# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+*.manifest
+*.spec
+
+# === Environment & Secrets ===
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials.json
+service-account.json
+firebase-adminsdk*.json
+id_rsa
+id_ed25519
+
+# === LocalRoom Chat - Temporary session storage ===
+# Generated at runtime per server start, contains uploaded images/files
+temp_data/
+temp_data/sessions/
+
+# === Logs ===
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Databases ===
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-shm
+*.db-wal
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === IDE / Editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# === Testing / Coverage / Cache ===
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+pytest.ini
+.tox/
+
+# === Cloud / Deployment caches ===
+.firebase/
+.vercel/
+.netlify/
+
+# === Keep lockfiles tracked ===
+!package-lock.json
+!pnpm-lock.yaml
+!yarn.lock
+!bun.lock
+!poetry.lock

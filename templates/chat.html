@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalRoom Chat</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="chat-body">
+    <div class="app">
+        <header class="header">
+            <div class="header-left">
+                <button id="sidebar-toggle" class="icon-btn" title="Daftar online" aria-label="Daftar online">☰</button>
+                <span class="app-title">LocalRoom Chat</span>
+            </div>
+            <div class="header-right">
+                <span id="conn-status" class="conn-status conn-connecting" title="Status koneksi">◌ Connecting</span>
+                <span id="online-count" class="online-count" title="Pengguna online">Online: 0</span>
+                <span id="current-user" class="current-user" title="Anda"></span>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <aside id="sidebar" class="sidebar">
+                <div class="sidebar-title">ONLINE</div>
+                <ul id="user-list" class="user-list"></ul>
+                <div class="sidebar-footer">
+                    <button id="leave-btn" class="leave-btn">Keluar</button>
+                </div>
+            </aside>
+
+            <section class="chat-area">
+                <div id="chat-messages" class="chat-messages"></div>
+
+                <div id="empty-state" class="empty-state" hidden>
+                    <div class="empty-icon">💬</div>
+                    <p>Belum ada pesan.</p>
+                    <p class="empty-sub">Kirim pesan pertama untuk memulai percakapan.</p>
+                </div>
+
+                <form id="composer" class="composer" autocomplete="off">
+                    <textarea
+                        id="message-input"
+                        rows="1"
+                        placeholder="Tulis pesan..."
+                        maxlength="4000"
+                    ></textarea>
+                    <div class="composer-actions">
+                        <label class="upload-btn" title="Upload gambar atau file">
+                            📎 Upload
+                            <input type="file" id="file-input" hidden>
+                        </label>
+                        <button type="submit" id="send-btn" class="send-btn">Kirim</button>
+                    </div>
+                    <div id="upload-status" class="upload-status" hidden></div>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox" hidden>
+        <img id="lightbox-img" alt="Gambar diperbesar">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Tutup">×</button>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/websocket.js"></script>
+    <script src="/static/js/notifications.js"></script>
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

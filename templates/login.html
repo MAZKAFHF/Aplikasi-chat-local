@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalRoom Chat — Masuk</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="login-body">
+    <main class="login-card">
+        <div class="login-brand">LocalRoom Chat</div>
+        <p class="login-subtitle">Komunikasi lokal tanpa internet</p>
+
+        <form id="login-form" autocomplete="off">
+            <label for="username">Nama panggilan</label>
+            <input
+                type="text"
+                id="username"
+                name="username"
+                maxlength="30"
+                placeholder="Masukkan username..."
+                required
+            >
+            <div id="login-error" class="error-banner" hidden></div>
+            <button type="submit" id="login-btn">Masuk ke Chat</button>
+        </form>
+
+        <p class="login-hint">
+            Username hanya berlaku selama server aktif. Tidak perlu password.
+        </p>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/login.js"></script>
+</body>
+</html>
